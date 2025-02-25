@@ -1,10 +1,7 @@
-const fs = require('fs')
-
 const cron = require('node-cron');
 const { Client, GatewayIntentBits, ButtonBuilder, ButtonStyle, ActionRowBuilder, GuildScheduledEventStatus } = require('discord.js');
 const client = new Client({ intents: [1,2,,128,256,512,1024,65536,32768] });
 const dotenv = require('dotenv');
-const wait = require('util').promisify(setTimeout);
 
 
 dotenv.config();
