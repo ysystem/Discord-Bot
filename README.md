@@ -20,7 +20,7 @@
 - 入室前  
 つまりVCに参加していない状態  
 つまり`oldState.channelId === null`
-- 入室後
+- 入室後  
 つまりVCに参加している状態  
 つまり`newState.channelId !== null`
   
