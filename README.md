@@ -16,7 +16,7 @@
 この機能により、誰がVCにいるのかを把握しやすい。  
 ### 実装(index.js 16~46行目)
 `voiceStateUpdate`イベント発生時に本機能が実行される。  
-引数は`(oldState, newState)`  (`voiceState`クラスは[こちら](https://discord.js.org/docs/packages/discord.js/14.18.0/VoiceState:Class))
+引数は`(oldState, newState)`  (`voiceState`クラスは[こちら](https://discord.js.org/docs/packages/discord.js/14.18.0/VoiceState:Class))  
 入室時は
 - 入室前  
 つまりVCに参加していない状態  
