@@ -22,5 +22,6 @@
 つまり`oldState.channelId === null`
 - 入室後
 つまりVCに参加している状態  
-つまり`newState.channelId !== null`    
+つまり`newState.channelId !== null`
+  
 となるため、これらの条件を満たした場合、テキストチャンネルに通知が送られる。
