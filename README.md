@@ -14,4 +14,13 @@
 この機能はDiscord自体にデフォルトで実装されていない。  
 この機能により、誰がVCにいるのかを把握しやすい。  
 ### 実装
-`voiceStateUpdate`イベント
+`voiceStateUpdate`イベント発生時に本機能が実行される。  
+引数は`(oldState, newState)`  
+入室時は
+- 入室前
+つまりVCに参加していない状態
+つまり`oldState.channelId === null`
+- 入室後
+つまりVCに参加している状態
+つまり`newState.channelId !== null`
+となるため、これらの条件を満たした場合、テキストチャンネルに通知が送られる。
