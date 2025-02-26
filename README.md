@@ -28,4 +28,9 @@
 となるため、これらの条件を満たした場合、テキストチャンネルに通知が送られる(退室時も同様)。
 
 ## サーバーイベントが作成されたときの通知
-Discordにはサーバーイベント(ギルドイベント)機能が存在する。以下のようなもの
+### 機能概要
+Discordにはサーバーイベント(ギルドイベント)機能が存在する。以下のようなもの  
+![guildEvent](https://github.com/user-attachments/assets/6c9af536-b82b-496a-83e1-b538fe368331)  
+こちらも同様、デフォルトではサーバーイベント作成時に通知してくれる機能は存在しない。
+サーバーイベントが作成されると、以下のように通知される。  
+![guildEventNotification](https://github.com/user-attachments/assets/6adae991-d926-42f7-8096-7f0627e6b9ee)
