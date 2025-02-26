@@ -3,7 +3,7 @@
 ※環境構築方法やアクセストークンの設定方法などは記載していません。
   
 `client.on(イベント名, void関数)`  
-と書くことで、イベントが起こったときにvoid関数に実装した機能が実行される。（[イベントの種類はこちら](https://discord.js.org/docs/packages/discord.js/14.18.0/Client:Class#on)）  
+と書くことで、イベントが起こったときに、void関数に実装した機能が実行される。（[イベントの種類はこちら](https://discord.js.org/docs/packages/discord.js/14.18.0/Client:Class#on)）  
 実装した機能を以下に示す。  
 以下、Voice ChannelをVCと記述する。  
 ※Voice Channelとは ... Voice Channelに参加している間は、参加しているユーザーどうしで通話をすることができる。
