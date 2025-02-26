@@ -41,7 +41,7 @@ Discordにはサーバーイベント(ギルドイベント)機能が存在す�
 引数は`(guildScheduledEvent)`(`guildScheduledEvent`クラスは[こちら](https://discord.js.org/docs/packages/discord.js/14.18.0/GuildScheduledEvent:Class))  
   
 ```const guild = guildScheduledEvent.guild;```
-によりイベントが作成されたサーバーを取得(英語圏ではDiscordサーバーのことをguild(ギルド)と呼んでいるらしい)  
+によりイベントが作成されたサーバーを取得  (英語圏ではDiscordサーバーのことをguild(ギルド)と呼んでいるらしい)  
   
 ```guild.channles.fetch()```
 によりサーバーのチャンネル一覧を取得。  
