@@ -8,6 +8,7 @@
 以下、Voice ChannelをVCと記述する。  
 ※Voice Channelとは ... Voice Channelに参加している間は、参加しているユーザーどうしで通話をすることができる。
 
+  
 ## VC入退出時の通知
 ### 機能概要
 ユーザーがVCに入室あるいは退室したときに、テキストチャンネルにて  
@@ -28,6 +29,7 @@
   
 となるため、これらの条件を満たした場合、テキストチャンネルに通知が送られる(退室時も同様)。
 
+  
 ## サーバーイベントが作成されたときの通知
 ### 機能概要
 Discordにはサーバーイベント(ギルドイベント)機能が存在する。以下のようなもの。  
@@ -52,6 +54,7 @@ Discordにはサーバーイベント(ギルドイベント)機能が存在す�
 本機能では、該当サーバーにおけるテキストチャンネルを一つ選択し、そのチャンネルに通知を送る。  
 なお、テキストチャンネルのタイプ(`channel.type`)は`0`である。(チャンネルタイプの詳細は[こちら](https://discord-api-types.dev/api/discord-api-types-v10/enum/ChannelType))
 
+  
 ## イベント開始時&終了時の通知
 ### 機能概要
 サーバーイベントが開始or終了したときに、その旨を通知する機能。  
@@ -72,6 +75,7 @@ if(oldGuildScheduledEvent.status !== 2 && newGuildScheduledEvent.status === 2)
 if(oldGuildScheduledEvent.status !== 3 && newGuildScheduledEvent.status === 3)
 ```
 
+  
 ## イベント予告通知
 ### 機能概要
 サーバーイベントの開始1週間前から、`イベント開始まであとn日`という形で通知する機能。  
@@ -95,5 +99,6 @@ const start_ts = event.scheduledStartTimestamp;
 現在時刻のタイムスタンプは`const now_ts = new Date().getTime();`で取得可能(index.js 131行目)。  
 したがって、これらの差分(`const diff = start_ts - now_ts;`, index.js 150行目)が7日分以下であれば、イベントが予定されたサーバーに通知を送る。  
 
+  
 
 ## アクティビティ開始の通知
