@@ -2,7 +2,7 @@
 ※注 ... 本botはdiscord.js v13を用いて実装しています。  
 ※環境構築方法やアクセストークンの設定方法などは記載していません。
   
-`client.on(event, void関数)`  
+`client.on(event, (引数) => void関数)`  
 と書くことで、eventが起こったときに、void関数に実装した機能が実行される。（[イベントの種類はこちら](https://discord.js.org/docs/packages/discord.js/14.18.0/Client:Class#on)）  
 実装した機能を以下に示す。  
 以下、Voice ChannelをVCと記述する。  
@@ -75,6 +75,18 @@ if(oldGuildScheduledEvent.status !== 2 && newGuildScheduledEvent.status === 2)
 if(oldGuildScheduledEvent.status !== 3 && newGuildScheduledEvent.status === 3)
 ```
 
+
+## アクティビティ開始の通知
+### 機能概要
+Discord上で外部アプリ等と連携している場合、そのアプリをアクティビティとしてプロフィール下に表示することができる(以下)。  
+VCにいるユーザーがアクティビティを開始したとき、その旨が通知される(以下)。  
+
+### 実装(index.js 92~125行目)
+`presenceUpdate`event 発生時に本機能が実行される。  
+引数は`(oldPresence,newPresence)`(`presence`クラスの詳細は[こちら](https://discord.js.org/docs/packages/discord.js/14.18.0/Presence:Class))  
+
+
+
   
 ## イベント予告通知
 ### 機能概要
@@ -98,7 +110,3 @@ const start_ts = event.scheduledStartTimestamp;
 ```
 現在時刻のタイムスタンプは`const now_ts = new Date().getTime();`で取得可能(index.js 131行目)。  
 したがって、これらの差分(`const diff = start_ts - now_ts;`, index.js 150行目)が7日分以下であれば、イベントが予定されたサーバーに通知を送る。  
-
-  
-
-## アクティビティ開始の通知
