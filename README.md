@@ -36,7 +36,7 @@ Discordにはサーバーイベント(ギルドイベント)機能が存在す�
 ![guildEvent](https://github.com/user-attachments/assets/6c9af536-b82b-496a-83e1-b538fe368331)  
   
 こちらも同様、デフォルトではサーバーイベント作成時に通知してくれる機能は存在しない。
-サーバーイベントが作成されると、以下のように通知される。  
+本機能では、サーバーイベントが作成されると、以下のように通知される。  
 ![guildEventNotification](https://github.com/user-attachments/assets/6adae991-d926-42f7-8096-7f0627e6b9ee)
   
 ### 実装(index.js 49~62行目)
