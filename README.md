@@ -79,7 +79,9 @@ if(oldGuildScheduledEvent.status !== 3 && newGuildScheduledEvent.status === 3)
 ## アクティビティ開始の通知
 ### 機能概要
 Discord上で外部アプリ等と連携している場合、そのアプリをアクティビティとしてプロフィール下に表示することができる(以下)。  
+![activity](https://github.com/user-attachments/assets/54f0fed7-36d6-4d90-9546-85ee81dbfa5f)
 VCにいるユーザーがアクティビティを開始したとき、その旨が通知される(以下)。  
+![startActivity](https://github.com/user-attachments/assets/b58d0353-eaf9-4f23-bab2-09e94f26e341)
 
 ### 実装(index.js 92~125行目)
 `presenceUpdate`event 発生時に本機能が実行される。  
