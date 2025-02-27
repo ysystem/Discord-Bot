@@ -104,7 +104,7 @@ newActivityがoldActivitiesに存在しなければ、newActivityを新しく開
 本機能は、イベント開始1週間前になった際、毎日定刻に通知を送る。  
 定刻に通知を送信するために、[node-cron](https://www.npmjs.com/package/node-cron)を使用する。  
 
-本機能は毎日8:00になったときに通知を送りたいので、以下のように記述する。  
+本機能は毎日8:00になったときに通知を送るので、以下のように記述する。  
 ```
 cron.schedule('0 0 8 * * *' async() => {/* 通知機能 */})
 ```
