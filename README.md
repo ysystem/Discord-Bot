@@ -98,7 +98,7 @@ newActivityがoldActivitiesに存在しなければ、newActivityを新しく開
 ### 機能概要
 サーバーイベントの開始1週間前から、`イベント開始まであとn日`という形で通知する機能。  
 以下のような感じ。  
-(後ほど掲載予定)
+![eventNotification](https://github.com/user-attachments/assets/9d3204c1-983f-4c41-b165-75f91220f7b5)
 
 ### 実装(index.js 130~164行目)
 本機能は、イベント開始1週間前になった際、毎日定刻に通知を送る。  
